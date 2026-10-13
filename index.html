@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deteksi Gerakan Tangan</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1675466124/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Hand Detector</h1>
+      <p>Deteksi gerakan tangan secara real-time</p>
+    </header>
+
+    <div class="stage">
+      <canvas id="canvas" width="640" height="480"></canvas>
+      <button id="mulai">Mulai</button>
+    </div>
+
+    <div class="status">
+      <span class="dot"></span>
+      <span id="hasil">Tekan Mulai, lalu tunjukkan tanganmu</span>
+    </div>
+  </main>
+
+  <video id="video"></video>
+  <div id="scare">👹</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
